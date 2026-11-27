@@ -162,19 +162,5 @@ footer { text-align: center; padding: 18px 16px 28px; font-size: 0.9rem; color: 
 
 <footer> Pur &amp; Petal Cafe - Bucandala, Imus, Cavite, Philippines </footer> 
 
-<script> 
-function showPage(pageId, clickedBtn) { 
-  document.querySelectorAll('.page').forEach(function (page) { 
-    page.classList.remove('active'); 
-  }); 
-  document.querySelectorAll('.nav-btn').forEach(function (btn) { 
-    btn.classList.remove('active'); 
-  }); 
-  document.getElementById(pageId).classList.add('active'); 
-  clickedBtn.classList.add('active'); 
-  document.body.classList.toggle('home-active', pageId === 'home');
-} 
-</script> 
-
 </body>
     </html>
