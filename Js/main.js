@@ -1,33 +1,42 @@
 
-function showPage(pageId, clickedBtn) {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Find the requested page
-    const targetPage = document.getElementById(pageId);
+    const pages = document.querySelectorAll(".page");
+    const buttons = document.querySelectorAll(".nav-btn");
 
-    // Check if the page exists
-    if (!targetPage) {
-        console.error("Page not found:", pageId);
-        return;
+    function showPage(pageId, clickedBtn) {
+
+        // Hide all pages
+        pages.forEach(function (page) {
+            page.classList.remove("active");
+        });
+
+        // Remove active button styling
+        buttons.forEach(function (button) {
+            button.classList.remove("active");
+        });
+
+        // Find and display selected page
+        const selectedPage = document.getElementById(pageId);
+
+        if (!selectedPage) {
+            console.error("Page not found: " + pageId);
+            return;
+        }
+
+        selectedPage.classList.add("active");
+        clickedBtn.classList.add("active");
+
+        // Hide header on Home page
+        document.body.classList.toggle("home-active", pageId === "home");
     }
 
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(function(page) {
-        page.classList.remove('active');
+    // Attach click events to navigation buttons
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const pageId = button.getAttribute("data-page");
+            showPage(pageId, button);
+        });
     });
 
-    // Remove active styling from navigation buttons
-    document.querySelectorAll('.nav-btn').forEach(function(btn) {
-        btn.classList.remove('active');
-    });
-
-    // Show the selected page
-    targetPage.classList.add('active');
-
-    // Highlight the clicked button
-    if (clickedBtn) {
-        clickedBtn.classList.add('active');
-    }
-
-    // Hide header on Home page
-    document.body.classList.toggle('home-active', pageId === 'home');
-}
+});
