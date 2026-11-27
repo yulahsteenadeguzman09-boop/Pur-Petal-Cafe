@@ -1,0 +1,33 @@
+<meta charset="UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<title>Pur &amp; Petal Cafe</title> 
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet" />
+
+<style> 
+* { box-sizing: border-box; margin: 0; padding: 0; } 
+body { font-family: 'Fredoka', sans-serif; background-color: #ffeef4; color: #5a3544; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; } 
+header { background-color: #ffd6e5; border-bottom: 3px solid #f4a4c0; text-align: center; padding: 24px 16px; } 
+header h1 { font-size: 2.3rem; color: #7a2e4d; } 
+header p { font-family: 'Patrick Hand', cursive; font-size: 1.3rem; margin-top: 4px; } 
+body.home-active header { display: none; }
+nav { background-color: #ffffff; border-bottom: 2px solid #ffd6e5; padding: 10px 16px; text-align: center; } 
+.nav-btn { font-family: 'Fredoka', sans-serif; background-color: #ffeef4; color: #7a2e4d; border: 2px solid #f4a4c0; border-radius: 10px; padding: 6px 14px; margin: 4px 6px; font-size: 0.95rem; font-weight: 600; cursor: pointer; } 
+.nav-btn:hover, .nav-btn.active { background-color: #f4a4c0; color: #ffffff; } 
+main { flex: 1; width: 100%; max-width: 820px; margin: 24px auto; padding: 0 16px; } 
+.page { display: none; } 
+.page.active { display: block; } 
+#home.active { min-height: calc(100vh - 150px); display: flex; align-items: center; justify-content: center; } 
+.box { background-color: #fffdfd; border: 2px solid #f4a4c0; border-radius: 16px; padding: 22px; margin-bottom: 24px; } 
+.box h2 { color: #7a2e4d; font-size: 1.45rem; margin-bottom: 14px; border-bottom: 2px dashed #ffd6e5; padding-bottom: 6px; } 
+.home-box { text-align: center; padding: 36px 28px; width: 100%; } 
+.home-title { font-size: 2.4rem; color: #7a2e4d; margin-bottom: 6px; } 
+.home-tagline { font-family: 'Patrick Hand', cursive; font-size: 1.35rem; color: #9e3d64; margin-bottom: 18px; } 
+.menu-columns { display: flex; gap: 24px; flex-wrap: wrap; } 
+.menu-col { flex: 1 1 320px; } 
+.menu-col h3 { color: #9e3d64; font-size: 1.15rem; margin-bottom: 8px; } 
+ul { list-style: none; } 
+.menu-col li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dotted #f5d0de; font-family: 'Patrick Hand', cursive; font-size: 1.18rem; } 
+.menu-col li:last-child { border-bottom: none; } 
+.info-list li { padding: 5px 0; } 
+footer { text-align: center; padding: 18px 16px 28px; font-size: 0.9rem; color: #7a2e4d; } 
+</style> 
