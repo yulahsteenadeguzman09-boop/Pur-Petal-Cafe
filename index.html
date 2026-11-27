@@ -22,19 +22,25 @@
   <p>"Where coffee blooms and cats make you smile."</p> 
 </header>
 
+
 <nav>
-    <button type="button" class="nav-btn active"
-        onclick="showPage('home', this)">Home</button>
+    <button type="button" class="nav-btn active" data-page="home">
+        Home
+    </button>
 
-    <button type="button" class="nav-btn"
-        onclick="showPage('drinks', this)">Drinks</button>
+    <button type="button" class="nav-btn" data-page="drinks">
+        Drinks
+    </button>
 
-    <button type="button" class="nav-btn"
-        onclick="showPage('treats', this)">Desserts &amp; Snacks</button>
+    <button type="button" class="nav-btn" data-page="treats">
+        Desserts &amp; Snacks
+    </button>
 
-    <button type="button" class="nav-btn"
-        onclick="showPage('info', this)">Hours &amp; Location</button>
+    <button type="button" class="nav-btn" data-page="info">
+        Hours &amp; Location
+    </button>
 </nav>
+
 
 <main> 
   <section id="home" class="page active"> 
